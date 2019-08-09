@@ -8,6 +8,7 @@ var db = mysql.createPool({
     host: 'localhost'
 });
 
+
 var app = koa();
  
 // Run sample app
