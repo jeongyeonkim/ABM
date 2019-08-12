@@ -7,7 +7,7 @@ var db = mysql.createPool({
     database:'abm',
     host: 'localhost'
 });
-
+sd
 
 var app = koa();
  
