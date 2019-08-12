@@ -17,7 +17,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema koa
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `koa` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+CREATE SCHEMA IF NOT EXISTS `koa` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ;
 USE `koa` ;
 
 -- -----------------------------------------------------
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`groups` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+COLLATE = utf8mb4_unicode_ci;
 
 
 -- -----------------------------------------------------
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`members` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '회원';
 
 
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`feeds` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '피드';
 
 
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`comments` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '코멘트';
 
 
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`tags` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '태그';
 
 
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`feed_tags` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '피드 태그';
 
 
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`group_members` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '그룹 멤버';
 
 
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `koa`.`group_tags` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci
+COLLATE = utf8mb4_unicode_ci
 COMMENT = '그룹 태그';
 
 
