@@ -5,5 +5,12 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
+router.get('/flash', function(req,res){
+  req.session.message = '세션 메세지';
+  req.flash('message','flash 메시지');
+  req.redirect('/users/flash/result');
+});
+router.get('/flash/result', funciton(req,res){
+  res.send(`${req.session.message} ${req.flash('message')}`);
+});
 module.exports = router;
