@@ -1,0 +1,43 @@
+module.exports=(sequelize,DataTypes)=>{
+    return sequelize.define('members',{
+        email :{
+            type:DataTypes.VARCHAR(255),
+            allowNull:false,
+            unique:true,
+        },
+        animal_id:{
+            type:DataTypes.VARCHAR(),
+            allowNull:false,
+        },
+        name:{
+            type:DataTypes.VARCHAR(),
+            allowNull:false,
+        },
+        nickname:{
+            type:DataTypes.VARCHAR(),
+            unique:true,
+        },
+        carrier:{
+            type:DataTypes.TINYINT(),
+        },
+        telehphone:{
+            type:DataTypes.INT(),
+            unique:true,
+        },
+        image_path:{
+            type:DataTypes.VARCHAR(),
+            allowNull:true,
+        },
+        introduce:{
+            type:DataTypes.TEXT(),
+            allowNull:true,
+        },
+        created_at:{
+            type:DataTypes.DATE,
+            allowNull:true,
+            defaultValue:DataTypes.NOW,
+        },
+    },{
+        timestamps:false,
+    });
+};
