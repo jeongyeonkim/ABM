@@ -40,65 +40,61 @@ CREATE TABLE `groups_tags` (
     `id`    INT NOT NULL AUTO_INCREMENT,
     `group no.` INT NOT NULL,
     `tag no.`   INT NOT NULL,
-    `group no.` INT NULL,
-    `tag no.`   INT NULL,
     `created_at`    TIMESTAMP   NULL
 );
 
 CREATE TABLE `comments` (
     `email` VARCHAR NOT NULL, 
-    `feeds no.` INT NOT NULL,
+    `feeds_no.` INT NOT NULL,
     `id`    INT NOT NULL AUTO_INCREMENT,
     `group no.` INT NOT NULL,
     `p_id`  INT NULL,
     `comment`   TEXT    NULL,
-    `created_at`    TIMESTAMP   NULL,
-    `updated_at`    TIMESTAMP   NULL
+    `created_at` TIMESTAMP NOT NULL,
+    `updated_at` TIMESTAMP   NULL
 );
 
 CREATE TABLE `group_members` (
     `email` VARCHAR NOT NULL,
     `id'    INT NOT NULL AUTO_INCREMENT,
     `group_no` INT NOT NULL,
-    `created_at`    TIMESTAMP   NULL
+    `created_at` TIMESTAMP NOT NULL
 );
 
 CREATE TABLE `feeds` (
-    'feeds no.` INT NOT NULL,
+    'feed_no` INT NOT NULL,
     `id`    INT NOT NULL,
-    `group no.` INT NOT NULL,
+    `group_no` INT NOT NULL,
     `type`  TINYINT NULL,
     `comment`   TEXT    NULL,
     `image_path`    VARCHAR NULL,
     `total_like`    INT NULL,
     `total_comment` INT NULL,
-    `created_at`    TIMESTAMP   NULL,
-    `updated_at`    TIMESTAMP   NULL
+    `created_at`    TIMESTAMP  NOT NULL,
+    `updated_at`    TIMESTAMP  NOT NULL
 );
 
 CREATE TABLE `feed_tags` (
     `id`    INT NOT NULL,
-    `feeds no.` INT NOT NULL,
+    `feed_no` INT NOT NULL,
     `email` VARCHAR NOT NULL,
-    `group no.` INT NOT NULL,
-    `tag no.`   INT NOT NULL,
-    `feed no.`  INT NULL,
-    `tag no.`   INT NULL,
+    `group_no` INT NOT NULL,
+    `tag_no`   INT NOT NULL,
     `created_at`    TIMESTAMP   NULL
 );
 
 CREATE TABLE `store` (
     `store_no` INT NOT NULL,
     `id`    INT NOT NULL,
-    `store_lnk` VARCHAR NULL,
+    `store_link` VARCHAR NULL,
     `category`  VARCHAR NULL,
     `image_path`    VARCHAR NULL,
-    `created_at`    TIMESTAMP   NULL,
+    `created_at`    TIMESTAMP  NOT NULL,
     `updated_at`    TIMESTAMP   NULL
 );
 
 CREATE TABLE `tags` (
-    `tag no.`   INT NOT NULL,
+    `tag_no`   INT NOT NULL,
     `hashtag`   TEXT    NULL,
     `created_at`    TIMESTAMP   NULL
 );

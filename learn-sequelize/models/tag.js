@@ -10,6 +10,10 @@ module.exports(sequelize,DataTypes)=>{
             allowNull:true,
             defaultValue:DataTypes.NOW,
         },
+        tag_no:{
+            type:DataTypes.INT,
+            allowNull:false,            
+        },
     },{
         timestamps:false,
     });
