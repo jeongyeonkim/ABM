@@ -27,7 +27,7 @@ CREATE TABLE `members` (
 );
 
 CREATE TABLE `groups` (
-    `group no.` INT NOT NULL AUTO_INCREMENT,
+    `group_no` INT NOT NULL AUTO_INCREMENT,
     `name`  VARCHAR NULL,
     `image_path`    VARCHAR NULL,
     `creator`   INT NULL,
@@ -38,16 +38,16 @@ CREATE TABLE `groups` (
 
 CREATE TABLE `groups_tags` (
     `id`    INT NOT NULL AUTO_INCREMENT,
-    `group no.` INT NOT NULL,
-    `tag no.`   INT NOT NULL,
+    `group_no` INT NOT NULL,
+    `tag_no`   INT NOT NULL,
     `created_at`    TIMESTAMP   NULL
 );
 
 CREATE TABLE `comments` (
     `email` VARCHAR NOT NULL, 
-    `feeds_no.` INT NOT NULL,
+    `feeds_no` INT NOT NULL,
     `id`    INT NOT NULL AUTO_INCREMENT,
-    `group no.` INT NOT NULL,
+    `group_no` INT NOT NULL,
     `p_id`  INT NULL,
     `comment`   TEXT    NULL,
     `created_at` TIMESTAMP NOT NULL,

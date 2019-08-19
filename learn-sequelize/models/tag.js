@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize/types";
 
-module.exports(sequelize,DataTypes)=>{
+module.exports = (sequelize,DataTypes) => {
     return sequelize.define('tags',{
         hashtag:{
             type:DataTypes.TEXT(),

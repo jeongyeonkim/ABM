@@ -16,7 +16,7 @@ module.exports = (sequelize,DataTypes)=>{
             type:DataTypes.TIMESTAMP,
             allowNull:false,            
         },
-        fedd_no:{
+        feed_no:{
             type:DataTypes.INT,
             allowNull:false,            
         },
