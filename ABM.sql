@@ -56,13 +56,13 @@ CREATE TABLE `comments` (
 
 CREATE TABLE `group_members` (
     `email` VARCHAR NOT NULL,
-    `id'    INT NOT NULL AUTO_INCREMENT,
+    `id`    INT NOT NULL AUTO_INCREMENT,
     `group_no` INT NOT NULL,
     `created_at` TIMESTAMP NOT NULL
 );
 
 CREATE TABLE `feeds` (
-    'feed_no` INT NOT NULL,
+    `feed_no` INT NOT NULL,
     `id`    INT NOT NULL,
     `group_no` INT NOT NULL,
     `type`  TINYINT NULL,

@@ -22,5 +22,23 @@ db.Group = require('/.group')(sequelize,Sequelize);
 db.Tag = require('/.tag')(sequelize,Sequelize);
 
 //define relation to tables
-db.Memeber.hasMany(db.Comment,{foreignKey:''},sourcekey: 'id')
+db.Memeber.hasMany(db.Comment,{foreignKey:'email', sourcekey: 'id'});
+db.Comment.belongsTo(db.Member,{foreignKey:'email', targetKey:'id'});
+
+db.Member.hasMany(db.Group_member,{foreignKey:'id', sourcekey: 'id'});
+db.Group.belongsToMany(db.Member,{through:'id'});
+
+db.Group.belongsToMany(db.Group_tag,{through:'group_no'});
+db.Group_tag.belongsToMany(db.Group,{through:'group_no'});
+db.Tag.belongsToMany(db.Group_tag,{through:'tag_no'});
+db.Group_tag.belongsToMany(db.Tag,{through:'tag_no'});
+db.Feed.belongsToMany(db.feed_tag,{through:'tag_no'});
+db.FeedTag.belongsToMany(db.Feed,{through:'tag_no'});
+
+db.Feed.hasMany(db.Comment,{foreignKey:'feed_no', sourcekey: 'feed_no'});
+db.Comment.belongsTo(db.Member,{foreignKey:'feed_no', targetKey:'feed_no'});
+
+
+
+
 module.exports = db;
