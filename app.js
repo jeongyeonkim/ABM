@@ -1,4 +1,4 @@
-const sql = require('mysql');
+//const sql = require('mysql');
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -25,7 +25,7 @@ var config = {
         }
       }
 
-sql.connect(config, err => { 
+    /*sql.connect(config, err => {
     if(err){
         throw err ;
     }
@@ -41,4 +41,4 @@ sql.connect(config, err => {
   sql.on('error', err => {
       // ... error handler 
       console.log("Sql database connection error " ,err);
-  })
+  })*/
