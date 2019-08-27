@@ -192,7 +192,7 @@ REFERENCES `Untitled` (
 );
 
 ALTER TABLE `group_members` ADD CONSTRAINT `FK_groups_TO_group_members_1` FOREIGN KEY (
-    `group no.`
+    `group_no`
 )
 REFERENCES `groups` (
     `group no.`
