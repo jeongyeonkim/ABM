@@ -20,7 +20,7 @@ module.exports=(sequelize,DataTypes)=>{
         carrier:{
             type:DataTypes.INTEGER(),
         },
-        telehphone:{
+        telephone:{
             type:DataTypes.INTEGER(),
             unique:true,
         },
