@@ -23,7 +23,7 @@ db.Tag = require('./tag')(sequelize,Sequelize);
 
 //define relation to tables
 
-db.Memeber.hasMany(db.Comment);
+db.Member.hasMany(db.Comment);
 db.Comment.belongsTo(db.Member,{foreignKey:'email', targetKey:'id'});
 db.Member.hasMany(db.Feed);
 db.Feed.belongsTo(db.Member,{foreignKey:'email',targetKey:'id'});
