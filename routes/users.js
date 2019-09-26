@@ -4,10 +4,11 @@ var Member = require('../models').Member;
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/members', function(req, res, next) {
   Member.findAll()
-  .then((members)=>{
-    res.json(members);
+  .then((Member)=>{
+    // res.render('sequelize',{Member});
+    res.send(Member);
   })
   .catch((err)=>{
     console.error(err);
@@ -37,7 +38,6 @@ router.post('/',function(req, res, next){
     next(err);
   });
 });
-module.exports = router;
 
 
 module.exports = router;

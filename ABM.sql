@@ -11,9 +11,9 @@ USE `nodejs`
 
 CREATE TABLE `members` (
     `id`    INT NOT NULL AUTO_INCREMENT,
-    `password`    VARCHAR NULL,
-    `email` VARCHAR NULL,
-    `animal_id` VARCHAR NULL,
+    `password`    VARCHAR(100) NOT NULL,
+    `email` VARCHAR() NOT NULL,
+    `animal_id` VARCHAR() NOT NULL,
     `name`  VARCHAR NULL,
     `nickname`  VARCHAR NULL,
     `carrier`   TINYINT NULL,

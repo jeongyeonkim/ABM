@@ -2,7 +2,8 @@
 ABM Team Project 
 
 #애완동물을 위한 웹앱
-
+## server start 명령어
+    npm start
 ## init
     npm install
 

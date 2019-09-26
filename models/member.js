@@ -5,6 +5,11 @@ module.exports=(sequelize,DataTypes)=>{
             allowNull:false,
             unique:true,
         },
+        password: {
+            type : DataTypes.STRING(255),
+            allowNull: false,
+            unique: true,
+        },
         animal_id:{
             type:DataTypes.STRING(),
             allowNull:false,

@@ -1,5 +1,5 @@
 module.exports = (sequelize,DataTypes)=>{
-    return sequelize.define('comment',{
+    return sequelize.define('comments',{
         email:{
             type:DataTypes.STRING,
             allowNull:false,            

@@ -1,7 +1,7 @@
 import { createConnection } from "net";
 
 exports.login = funciton(req,res){
-    var eamail = req.body.email;
+    var email = req.body.email;
     var password = req.body.password;
     createConnection.query('SELECT * FROM users WHERE email = ?, [email]',
     funciton (errer,results,fields){
@@ -32,5 +32,6 @@ exports.login = funciton(req,res){
                 });
             }
         }    
+    }
     
 
