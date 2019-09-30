@@ -22,15 +22,15 @@ module.exports=(sequelize,DataTypes) => {
         },
         total_comment:{
             type: DataTypes.INTEGER,
-            aloowNull:true,
+            allowNull:true,
         },
         created_at:{
             type: 'TIMESTAMP',
-            aloowNull:false,
+            allowNull:false,
         },
         updated_at:{
             type: 'TIMESTAMP',
-            aloowNull:false,
+            allowNull:false,
         },
 
     });
